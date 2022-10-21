@@ -6,7 +6,7 @@ const pseudo = localStorage.getItem("pseudo");
 if (!pseudo) {
   console.log("fffffffffffffff");
   nav__links.innerHTML = `
-  <a href="./index.html"><img class="logo" src="./images/pokedex.png" alt="spikéball"></a>
+  <a href="index.html"><img class="logo" src="./images/pokedex.png" alt="spikéball"></a>
   <a href="log.html" class = "connection-link"> Connexion/Inscription  </a>
   `;
   const connectionLink = document.querySelector(".connection-link");
