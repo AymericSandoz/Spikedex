@@ -1,16 +1,20 @@
 ///////////affiche du dom pour la partie connexion/déconnexion
 const nav__links = document.querySelector(".nav__links");
+const header__wrapper = document.querySelector(".site-header__wrapper");
+
 const pseudo = localStorage.getItem("pseudo");
 // console.log(pseudo);
 // const welcomeMessage = document.querySelector(".welcome-message");
 if (!pseudo) {
   nav__links.innerHTML = `
-  <a href="../public/index.html"><img class="logo" src="./images/pokedex.png" alt="spikéball"></a>
-  <a href="log.html" class = "connection-link"> Connexion/Inscription  </a>
+  <a href="log.html" class = "nav__item connection-link"> <span class= "log-big-screen"> Connexion / Inscription </span> <span class= "log-small-screen"><i class="fa-solid fa-user"></i> / <i class="fa-solid fa-user-plus"></i> </span> </a>
   `;
   const connectionLink = document.querySelector(".connection-link");
 
   connectionLink.style.justifyContent = "flex-end";
+  header__wrapper.style.display = "flex";
+  header__wrapper.style.justifyContent = "space-between";
+  header__wrapper.style.alignItems = "center";
   // welcomeMessage.innerHTML = `
   // <p>bienvenu ${pseudo}</p>
   // `;
