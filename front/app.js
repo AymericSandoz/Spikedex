@@ -48,7 +48,7 @@ document.getElementById("switch").addEventListener("change", function () {
 });
 
 const fetchCardList = () => {
-  fetch("http://localhost:5000/api/card/")
+  fetch(`${process.env.MONGO_URL}/api/card/`)
     .then((reponse) => reponse.json())
     .then((allSpikemmon) => {
       console.log("allspikemon:", allSpikemmon);
@@ -113,7 +113,7 @@ setTimeout(function () {
 // };
 //////////Get your own cards
 const fetchOwnerCardList = () => {
-  fetch("https://spikedex.vercel.app/api/card/ownerCards", {
+  fetch("http://localhost:5000/api/card/ownerCards", {
     method: "GET",
     headers: {
       authorization: `Bearer ${localStorage.getItem("token")}`,
