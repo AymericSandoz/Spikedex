@@ -113,7 +113,7 @@ setTimeout(function () {
 // };
 //////////Get your own cards
 const fetchOwnerCardList = () => {
-  fetch("http://localhost:5000/api/card/ownerCards", {
+  fetch("https://spikedex.vercel.app/api/card/ownerCards", {
     method: "GET",
     headers: {
       authorization: `Bearer ${localStorage.getItem("token")}`,
