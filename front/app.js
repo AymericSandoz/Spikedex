@@ -3,6 +3,7 @@ let tableauFin = [];
 const searchInput = document.querySelector(".recherche-poke input");
 const listePoke = document.querySelector(".liste-poke");
 const chargement = document.querySelector(".loader");
+Mongo_url = `${process.env.MONGO_URL}`;
 // const types = {
 //   Feuille: "#78c850",
 //   Sol: "#E2BF65",
@@ -48,7 +49,7 @@ document.getElementById("switch").addEventListener("change", function () {
 });
 
 const fetchCardList = () => {
-  fetch(`${process.env.MONGO_URL}/api/card/`)
+  fetch(`${Mongo_url}/api/card/`)
     .then((reponse) => reponse.json())
     .then((allSpikemmon) => {
       console.log("allspikemon:", allSpikemmon);
