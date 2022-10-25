@@ -49,7 +49,7 @@ document.getElementById("switch").addEventListener("change", function () {
 });
 
 const fetchCardList = () => {
-  fetch(`https://spikedex.vercel.app/api/card/`)
+  fetch(`/api/card/`)
     .then((reponse) => reponse.json())
     .then((allSpikemmon) => {
       console.log("allspikemon:", allSpikemmon);
