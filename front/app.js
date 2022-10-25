@@ -4,9 +4,6 @@ const searchInput = document.querySelector(".recherche-poke input");
 const listePoke = document.querySelector(".liste-poke");
 const chargement = document.querySelector(".loader");
 
-Mongo_url =
-  "mongodb+srv://vercel-admin-user:QpEESRaBQJNbGnIo@cluster0.znqu1dh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-console.log(`${Mongo_url}/api/card/`);
 // const types = {
 //   Feuille: "#78c850",
 //   Sol: "#E2BF65",
@@ -52,7 +49,7 @@ document.getElementById("switch").addEventListener("change", function () {
 });
 
 const fetchCardList = () => {
-  fetch(`${Mongo_url}/api/card/`)
+  fetch(`https://spikedex.vercel.app/api/card/`)
     .then((reponse) => reponse.json())
     .then((allSpikemmon) => {
       console.log("allspikemon:", allSpikemmon);
