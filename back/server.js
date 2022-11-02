@@ -78,3 +78,5 @@ app.use("/api/user", usersRoutes);
 app.listen(process.env.PORT, () => {
   console.log(`Listening on port ${process.env.PORT}`);
 });
+
+module.exports = app;
