@@ -49,7 +49,7 @@ document.getElementById("switch").addEventListener("change", function () {
 });
 
 const fetchCardList = () => {
-  fetch(`/api/card/`)
+  fetch(`http://localhost:5000/api/card/`)
     .then((reponse) => reponse.json())
     .then((allSpikemmon) => {
       console.log("allspikemon:", allSpikemmon);
@@ -114,7 +114,7 @@ setTimeout(function () {
 // };
 //////////Get your own cards
 const fetchOwnerCardList = () => {
-  fetch("/api/card/ownerCards", {
+  fetch("http://localhost:5000/api/card/ownerCards", {
     method: "GET",
     headers: {
       authorization: `Bearer ${localStorage.getItem("token")}`,
