@@ -74,14 +74,17 @@ if (!pseudo) {
 {
   /* <a class="deconnection-link"> <i class="fa-solid fa-user-slash"></i></a> */
 }
-const deconnectionLink = document.querySelector(".deconnection-link");
-deconnectionLink.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (window.confirm("Voulez-vous vous déconnectez ?")) {
-    localStorage.clear();
-    document.location.href = `log.html`;
-  }
-});
+
+if (pseudo) {
+  const deconnectionLink = document.querySelector(".deconnection-link");
+  deconnectionLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (window.confirm("Voulez-vous vous déconnectez ?")) {
+      localStorage.clear();
+      document.location.href = `log.html`;
+    }
+  });
+}
 
 let navToggle = document.querySelector(".nav__toggle");
 let navWrapper = document.querySelector(".nav__wrapper");
